@@ -1,0 +1,82 @@
+:root {
+    --brass: #D4AF37;
+    --dark: #1A1A1A;
+    --transition-lux: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+body { font-family: 'Montserrat', sans-serif; }
+h1, h2, h3, .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.05em; }
+
+.sub-heading {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 0.65rem;
+    color: var(--brass);
+    font-weight: 700;
+}
+
+/* Nav Link Hover */
+.nav-link { position: relative; transition: color 0.3s ease; }
+.nav-link::after {
+    content: ''; position: absolute; width: 0; height: 1px;
+    bottom: -4px; left: 0; background: var(--brass); transition: width 0.4s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Buttons */
+.btn-brass-solid {
+    display: inline-block; background-color: var(--brass); color: #000;
+    padding: 1.25rem 3.5rem; text-transform: uppercase; font-size: 0.7rem;
+    font-weight: 800; letter-spacing: 0.3em; transition: var(--transition-lux);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center;
+}
+.btn-brass-solid:hover { background-color: #fff; transform: translateY(-3px); }
+
+.btn-secondary-outline {
+    display: inline-block; border: 1px solid rgba(255,255,255,0.4); color: #fff;
+    padding: 1.25rem 3.5rem; text-transform: uppercase; font-size: 0.7rem;
+    font-weight: 600; letter-spacing: 0.3em; transition: var(--transition-lux);
+}
+.btn-secondary-outline:hover { background: #fff; color: #000; }
+
+.btn-brass-outline {
+    border: 1.5px solid var(--brass); color: var(--brass);
+    padding: 0.6rem 1.8rem; font-size: 10px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.1em; transition: all 0.3s ease;
+}
+
+/* Scrolled Navbar */
+.nav-scrolled {
+    background: rgba(10, 10, 10, 0.98);
+    padding: 0.8rem 1.5rem !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* Cards */
+.luxury-card {
+    position: relative; background: #fff; padding: 5rem 3rem;
+    border: 1px solid #f0f0f0; transition: var(--transition-lux); overflow: hidden;
+}
+.luxury-card:hover { transform: translateY(-10px); border-color: var(--brass); }
+.card-number {
+    position: absolute; top: 1rem; right: 1.5rem; font-family: 'Cinzel', serif;
+    font-size: 4rem; font-style: italic; font-weight: 700;
+}
+.card-border-gold {
+    position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
+    background: var(--brass); transform: scaleX(0); transition: transform 0.6s var(--transition-lux);
+}
+.luxury-card:hover .card-border-gold { transform: scaleX(1); }
+
+/* Form Fields */
+.input-field {
+    width: 100%; background: transparent; border: none; border-bottom: 1px solid #d1d1d1;
+    padding: 1rem 0; font-size: 0.75rem; letter-spacing: 0.1em; transition: border-color 0.4s ease;
+}
+.input-field:focus { outline: none; border-color: var(--brass); }
+
+/* Animations */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.zoom-effect { animation: slowZoom 40s infinite alternate; }
+@keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.15); } }

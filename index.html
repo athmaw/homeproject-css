@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marci Metzger | Luxury Real Estate Pahrump, NV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F8F5F2] text-[#1A1A1A] antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 transition-all duration-500 py-6 px-6" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="font-serif text-2xl tracking-[0.2em] font-bold text-white transition-colors duration-300" id="logoText">MARCI METZGER</div>
+            
+            <div class="hidden lg:flex space-x-10 uppercase text-[10px] tracking-[0.3em] font-bold text-white/90">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#listings" class="nav-link">Portfolio</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <button class="lg:hidden text-white" id="menuToggle">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+
+            <a href="tel:2069196886" class="btn-brass-outline hidden lg:block">CALL: 206.919.6886</a>
+        </div>
+        
+        <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-black/95 p-8 flex flex-col space-y-6 text-white uppercase text-center text-xs tracking-widest border-t border-white/10">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#listings" class="mobile-link">Portfolio</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </nav>
+
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/mtn%20falls%20pond.jpg" class="absolute inset-0 w-full h-full object-cover zoom-effect" id="hero-img">
+        <div class="absolute inset-0 bg-stone-900/60"></div>
+        <div class="relative z-10 text-center px-6 max-w-5xl">
+            <p class="text-[#D4AF37] uppercase tracking-[0.8em] text-[12px] mb-6 reveal font-bold">The Ridge Realty Group</p>
+            <h1 class="text-white font-serif text-5xl md:text-8xl mb-12 leading-tight drop-shadow-2xl">Luxury Real Estate in Pahrump, Nevada</h1>
+            <div class="reveal flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#listings" class="btn-brass-solid">Explore Portfolio</a>
+                <a href="#contact" class="btn-secondary-outline">Schedule a Showing</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white border-b border-stone-200 py-20 relative z-10">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-center font-serif">
+            <div class="reveal">
+                <p class="text-5xl text-stone-800 mb-2">90+</p>
+                <p class="sub-heading">Clients Helped in 2021</p>
+            </div>
+            <div class="reveal" style="transition-delay: 200ms;">
+                <p class="text-5xl text-stone-800 mb-2">$28.5M</p>
+                <p class="sub-heading">Closed Sales Volume</p>
+            </div>
+            <div class="reveal" style="transition-delay: 400ms;">
+                <p class="text-5xl text-stone-800 mb-2">30</p>
+                <p class="sub-heading">Years of Expertise</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-12 gap-16 items-center">
+            <div class="md:col-span-6 relative reveal">
+                <img src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/photo-5db79f9.jpg" class="w-full grayscale hover:grayscale-0 transition duration-1000 shadow-2xl" alt="Marci Metzger">
+                <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-[#D4AF37]/10 -z-10"></div>
+            </div>
+            <div class="md:col-span-6 space-y-8 reveal" style="transition-delay: 300ms;">
+                <p class="sub-heading">Premier Agent</p>
+                <h2 class="font-serif text-5xl leading-tight">Marci Metzger</h2>
+                <div class="w-16 h-[2px] bg-[#D4AF37]"></div>
+                <p class="text-stone-500 font-light leading-relaxed italic text-xl">"Our clients deserve our best, & we want to make sure our best is better every year."</p>
+                <p class="text-stone-600 leading-relaxed font-light">With nearly three decades of experience, Marci has transitioned from a Licensed Broker in Seattle to Pahrump's top real estate authority. Her approach blends rigorous market analysis with an intimate knowledge of the Southern Nevada landscape.</p>
+                <br>
+                <a href="#contact" class="btn-brass-outline !border-stone-900 !text-stone-900 hover:!bg-stone-900 hover:!text-white">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="listings" class="py-32 bg-stone-900 text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="sub-heading mb-4 text-[#D4AF37]">Active Inventory</p>
+            <h2 class="font-serif text-5xl mb-20 uppercase tracking-widest">Curated Portfolio</h2>
+            <div class="grid md:grid-cols-3 gap-8" id="listingsGrid"></div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+            <div class="luxury-card reveal">
+                <div class="card-number text-[#D4AF37]/10">01</div>
+                <h3 class="font-serif text-2xl mb-6 relative z-10">Seller Marketing</h3>
+                <p class="text-stone-500 font-light leading-relaxed">We exhaust every avenue to ensure our listings are at the fingertips of every global buyer, maximizing property exposure.</p>
+                <div class="card-border-gold"></div>
+            </div>
+            <div class="luxury-card reveal" style="transition-delay: 200ms;">
+                <div class="card-number text-[#D4AF37]/10">02</div>
+                <h3 class="font-serif text-2xl mb-6 relative z-10">Buyer Representation</h3>
+                <p class="text-stone-500 font-light leading-relaxed">Navigate the market with a pro. Market analysis, upgrade lists, and contractors on speed dial for our clients.</p>
+                <div class="card-border-gold"></div>
+            </div>
+            <div class="luxury-card reveal" style="transition-delay: 400ms;">
+                <div class="card-number text-[#D4AF37]/10">03</div>
+                <h3 class="font-serif text-2xl mb-6 relative z-10">Financing Guidance</h3>
+                <p class="text-stone-500 font-light leading-relaxed">Trust us to connect you with the right loan options and credit experts to ensure a seamless closing process.</p>
+                <div class="card-border-gold"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 bg-stone-50">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-4xl mb-12 uppercase tracking-widest">Begin Your Journey</h2>
+            <form id="contactForm" class="text-left space-y-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <input type="text" placeholder="FULL NAME" class="input-field" required>
+                    <input type="email" placeholder="EMAIL ADDRESS" class="input-field" required>
+                </div>
+                <textarea placeholder="WHAT CAN WE ASSIST YOU WITH?" rows="3" class="input-field" required></textarea>
+                <button type="submit" class="w-full btn-brass-solid py-6">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-black text-white/50 py-16 px-6 text-center">
+        <div class="max-w-7xl mx-auto space-y-8">
+            <div class="font-serif text-xl text-white tracking-[0.3em]">MARCI METZGER</div>
+            <p class="text-[9px] uppercase tracking-[0.4em] max-w-xl mx-auto leading-loose">
+                Redesigned as part of a UX/UI improvement initiative focused on lead conversion, brand clarity, and luxury positioning.
+            </p>
+            <div class="w-full h-[1px] bg-white/10"></div>
+            <p class="text-[10px] tracking-[0.2em] uppercase">© 2026 Marci Metzger Homes | Pahrump, NV | Realtor®</p>
+        </div>
+    </footer>
+
+    <a href="tel:2069196886" class="fixed bottom-8 right-8 bg-[#D4AF37] p-4 rounded-full shadow-2xl z-[60] hover:scale-110 transition-transform lg:hidden">
+        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.47 5.47l.772-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+    </a>
+
+    <script src="main.js"></script>
+</body>
+</html>
