@@ -30,10 +30,11 @@
         </div>
         
         <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-black/95 p-8 flex flex-col space-y-6 text-white uppercase text-center text-xs tracking-widest border-t border-white/10">
-            <a href="#home" class="mobile-link">Home</a>
-            <a href="#about" class="mobile-link">About</a>
-            <a href="#listings" class="mobile-link">Portfolio</a>
-            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="#home" class="mobile-link" onclick="toggleMenu()">Home</a>
+            <a href="#about" class="mobile-link" onclick="toggleMenu()">About</a>
+            <a href="#listings" class="mobile-link" onclick="toggleMenu()">Portfolio</a>
+            <a href="#services" class="mobile-link" onclick="toggleMenu()">Services</a>
+            <a href="#contact" class="mobile-link" onclick="toggleMenu()">Contact</a>
         </div>
     </nav>
 
@@ -45,7 +46,6 @@
             <h1 class="text-white font-serif text-5xl md:text-8xl mb-12 leading-tight drop-shadow-2xl">Luxury Real Estate in Pahrump, Nevada</h1>
             <div class="reveal flex flex-col sm:flex-row gap-6 justify-center">
                 <a href="#listings" class="btn-brass-solid">Explore Portfolio</a>
-                <a href="#contact" class="btn-secondary-outline">Schedule a Showing</a>
             </div>
         </div>
     </header>
@@ -79,8 +79,7 @@
                 <div class="w-16 h-[2px] bg-[#D4AF37]"></div>
                 <p class="text-stone-500 font-light leading-relaxed italic text-xl">"Our clients deserve our best, & we want to make sure our best is better every year."</p>
                 <p class="text-stone-600 leading-relaxed font-light">With nearly three decades of experience, Marci has transitioned from a Licensed Broker in Seattle to Pahrump's top real estate authority. Her approach blends rigorous market analysis with an intimate knowledge of the Southern Nevada landscape.</p>
-                <br>
-                <a href="#contact" class="btn-brass-outline !border-stone-900 !text-stone-900 hover:!bg-stone-900 hover:!text-white">Learn More</a>
+                <br><a href="#contact" class="btn-brass-outline !border-stone-900 !text-stone-900 hover:!bg-stone-900 hover:!text-white">Learn More</a>
             </div>
         </div>
     </section>
@@ -88,37 +87,61 @@
     <section id="listings" class="py-32 bg-stone-900 text-white">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <p class="sub-heading mb-4 text-[#D4AF37]">Active Inventory</p>
-            <h2 class="font-serif text-5xl mb-20 uppercase tracking-widest">Curated Portfolio</h2>
+            <h2 class="font-serif text-5xl mb-20 uppercase tracking-widest text-white">Curated Portfolio</h2>
             <div class="grid md:grid-cols-3 gap-8" id="listingsGrid"></div>
+            <div class="mt-16 reveal">
+                <a href="https://marcimetzger.com/listings" target="_blank" class="btn-brass-outline">View All Live Listings</a>
+            </div>
         </div>
     </section>
 
     <section id="services" class="py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-12">
-            <div class="luxury-card reveal">
-                <div class="card-number text-[#D4AF37]/10">01</div>
-                <h3 class="font-serif text-2xl mb-6 relative z-10">Seller Marketing</h3>
-                <p class="text-stone-500 font-light leading-relaxed">We exhaust every avenue to ensure our listings are at the fingertips of every global buyer, maximizing property exposure.</p>
-                <div class="card-border-gold"></div>
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="mb-20">
+                <p class="sub-heading mb-4 text-[#D4AF37]">Bespoke Expertise</p>
+                <h2 class="font-serif text-4xl tracking-widest uppercase">Our Services</h2>
             </div>
-            <div class="luxury-card reveal" style="transition-delay: 200ms;">
-                <div class="card-number text-[#D4AF37]/10">02</div>
-                <h3 class="font-serif text-2xl mb-6 relative z-10">Buyer Representation</h3>
-                <p class="text-stone-500 font-light leading-relaxed">Navigate the market with a pro. Market analysis, upgrade lists, and contractors on speed dial for our clients.</p>
-                <div class="card-border-gold"></div>
-            </div>
-            <div class="luxury-card reveal" style="transition-delay: 400ms;">
-                <div class="card-number text-[#D4AF37]/10">03</div>
-                <h3 class="font-serif text-2xl mb-6 relative z-10">Financing Guidance</h3>
-                <p class="text-stone-500 font-light leading-relaxed">Trust us to connect you with the right loan options and credit experts to ensure a seamless closing process.</p>
-                <div class="card-border-gold"></div>
+            
+            <div class="grid md:grid-cols-3 gap-4 lg:gap-0">
+                <div class="editorial-card reveal h-[550px]">
+                    <img src="https://img1.wsimg.com/isteam/stock/12792" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-num">01</span>
+                        <h3 class="font-serif text-2xl mb-4 text-white">Seller Marketing</h3>
+                        <p class="text-stone-300 font-light text-sm leading-relaxed">We exhaust every avenue to ensure our listings are at the fingertips of every global buyer, maximizing exposure.</p>
+                        <div class="card-line"></div>
+                    </div>
+                </div>
+
+                <div class="editorial-card reveal h-[550px]" style="transition-delay: 200ms;">
+                    <img src="https://img1.wsimg.com/isteam/stock/43920" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-num">02</span>
+                        <h3 class="font-serif text-2xl mb-4 text-white">Buyer Representation</h3>
+                        <p class="text-stone-300 font-light text-sm leading-relaxed">Navigate the market with a pro. Market analysis, upgrade lists, and contractors on speed dial.</p>
+                        <div class="card-line"></div>
+                    </div>
+                </div>
+
+                <div class="editorial-card reveal h-[550px]" style="transition-delay: 400ms;">
+                    <img src="https://img1.wsimg.com/isteam/stock/kayaJdA" class="card-bg">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-num">03</span>
+                        <h3 class="font-serif text-2xl mb-4 text-white">Financing Guidance</h3>
+                        <p class="text-stone-300 font-light text-sm leading-relaxed">Trust us to connect you with the right loan options and credit experts to ensure a seamless closing.</p>
+                        <div class="card-line"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="contact" class="py-32 bg-stone-50">
         <div class="max-w-2xl mx-auto px-6 text-center">
-            <h2 class="font-serif text-4xl mb-12 uppercase tracking-widest">Begin Your Journey</h2>
+            <h2 class="font-serif text-4xl mb-12 uppercase tracking-widest">Call or Visit</h2>
             <form id="contactForm" class="text-left space-y-10">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <input type="text" placeholder="FULL NAME" class="input-field" required>
@@ -130,9 +153,77 @@
         </div>
     </section>
 
+    <section id="location" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+            <p class="sub-heading mb-4">Visit Our Office</p>
+            <h2 class="font-serif text-4xl mb-8 uppercase tracking-widest">Southern Nevada Expertise</h2>
+            <p class="text-stone-600 mb-8 font-light leading-relaxed">
+                Located in the heart of Pahrump, our office serves as the central hub for luxury real estate across the valley. Whether you're looking for mountain views or desert estates, our doors are open for your next big move.
+            </p>
+            <div class="space-y-4 text-sm tracking-widest uppercase font-bold">
+                <p class="flex items-center gap-4">
+                    <span class="text-[#D4AF37]">Address:</span> 3190 HW-160, Suite F, Pahrump, NV 89048
+                </p>
+                <p class="flex items-center gap-4">
+                    <span class="text-[#D4AF37]">Hours:</span> 08:00 AM – 07:00 PM Daily
+                </p>
+            </div>
+        </div>
+        
+        <div class="h-[450px] w-full shadow-2xl reveal grayscale hover:grayscale-0 transition-all duration-1000">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.782390890696!2d-115.9877709!3d36.210438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c7155695663673%3A0xc622222222222222!2s3190%20NV-160%20%23f%2C%20Pahrump%2C%20NV%2089048!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
     <footer class="bg-black text-white/50 py-16 px-6 text-center">
-        <div class="max-w-7xl mx-auto space-y-8">
-            <div class="font-serif text-xl text-white tracking-[0.3em]">MARCI METZGER</div>
+        <div class="max-w-7xl mx-auto space-y-12">
+            
+            <div class="flex justify-center items-center space-x-10 text-white mb-10">
+                <a href="https://www.facebook.com/MarciHomes/" target="_blank" class="hover:text-[#D4AF37] transition-all duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 
+                        9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 
+                        0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/marciandlauren_nvrealtors/" target="_blank" class="hover:text-[#D4AF37] transition-all duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 
+                        4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 
+                        0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 
+                        4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 
+                        4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 
+                        6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 
+                        5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 
+                        0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 
+                        1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/marci-metzger-30642496/" target="_blank" class="hover:text-[#D4AF37] transition-all duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 
+                        5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 
+                        1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump" target="_blank" class="hover:text-[#D32323] transition-all duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12.443 14.86c-.141.282-.424.434-.733.434a.792.792 0 0 1-.29-.065l-3.361-1.517a.784.784 0 0 1-.383-1.025.79.79 0 0 1 1.025-.383l3.36 
+                        1.517c.384.183.55.641.382 1.039zm7.34-1.63a.8.8 0 0 1-.202.8l-.279.213-3.211 1.834a.795.795 0 0 1-.351.099.782.782 0 0 1-.555-.266.786.786 0 0 
+                        1 .182-1.066l3.211-1.834a.786.786 0 0 1 1.066.183.784.784 0 0 1 .139.237zm-2.072-7.726a.788.788 0 0 1 .425.694c0 .282-.14.544-.411.668l-3.411 
+                        1.708a.794.794 0 0 1-.26.065.787.787 0 0 1-.692-.426.787.787 0 0 1 .342-1.032l3.411-1.708c.381-.192.848-.033 1.037.348l.16.283zm-7.593-1.503c.313 
+                        0 .584.21.681.503l1.092 3.53a.786.786 0 0 1-.49.94.79.79 0 0 1-.252.031.78.78 0 0 1-.68-.504l-1.093-3.53a.788.788 0 0 1 .49-.938.79.79 0 0 1 
+                        .252-.032zm-1.862 11.23a.77.77 0 0 1-.722-.456l-1.386-3.428a.787.787 0 0 1 .411-.983.786.786 0 0 1 .983.412l1.386 3.427a.787.787 0 0 1-.412.983.784.784 
+                        0 0 1-.26.045z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="font-serif text-xl text-white tracking-[0.3em] uppercase">MARCI METZGER</div>
             <p class="text-[9px] uppercase tracking-[0.4em] max-w-xl mx-auto leading-loose">
                 Redesigned as part of a UX/UI improvement initiative focused on lead conversion, brand clarity, and luxury positioning.
             </p>
@@ -142,7 +233,8 @@
     </footer>
 
     <a href="tel:2069196886" class="fixed bottom-8 right-8 bg-[#D4AF37] p-4 rounded-full shadow-2xl z-[60] hover:scale-110 transition-transform lg:hidden">
-        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 005.47 5.47l.772-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
+        <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 
+            11.037 0 005.47 5.47l.772-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path></svg>
     </a>
 
     <script src="main.js"></script>

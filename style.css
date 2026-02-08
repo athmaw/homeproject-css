@@ -4,7 +4,7 @@
     --transition-lux: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-body { font-family: 'Montserrat', sans-serif; }
+body { font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
 h1, h2, h3, .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.05em; }
 
 .sub-heading {
@@ -32,13 +32,6 @@ h1, h2, h3, .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.05em; 
 }
 .btn-brass-solid:hover { background-color: #fff; transform: translateY(-3px); }
 
-.btn-secondary-outline {
-    display: inline-block; border: 1px solid rgba(255,255,255,0.4); color: #fff;
-    padding: 1.25rem 3.5rem; text-transform: uppercase; font-size: 0.7rem;
-    font-weight: 600; letter-spacing: 0.3em; transition: var(--transition-lux);
-}
-.btn-secondary-outline:hover { background: #fff; color: #000; }
-
 .btn-brass-outline {
     border: 1.5px solid var(--brass); color: var(--brass);
     padding: 0.6rem 1.8rem; font-size: 10px; font-weight: 800;
@@ -52,21 +45,16 @@ h1, h2, h3, .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.05em; 
     box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
 
-/* Cards */
-.luxury-card {
-    position: relative; background: #fff; padding: 5rem 3rem;
-    border: 1px solid #f0f0f0; transition: var(--transition-lux); overflow: hidden;
-}
-.luxury-card:hover { transform: translateY(-10px); border-color: var(--brass); }
-.card-number {
-    position: absolute; top: 1rem; right: 1.5rem; font-family: 'Cinzel', serif;
-    font-size: 4rem; font-style: italic; font-weight: 700;
-}
-.card-border-gold {
-    position: absolute; bottom: 0; left: 0; width: 100%; height: 3px;
-    background: var(--brass); transform: scaleX(0); transition: transform 0.6s var(--transition-lux);
-}
-.luxury-card:hover .card-border-gold { transform: scaleX(1); }
+/* Editorial Service Card Styling */
+.editorial-card { position: relative; overflow: hidden; background: #000; cursor: pointer; }
+.card-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1); filter: grayscale(100%); }
+.card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.95) 15%, transparent); }
+.card-content { position: relative; z-index: 10; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding: 3.5rem 2.5rem; transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1); }
+.card-num { font-family: 'Cinzel', serif; font-size: 6rem; color: rgba(212, 175, 55, 0.15); position: absolute; top: 1rem; right: 2rem; font-style: italic; font-weight: 700; }
+.card-line { width: 50px; height: 2px; background: #D4AF37; margin-top: 2rem; transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1); }
+.editorial-card:hover .card-bg { transform: scale(1.1); opacity: 0.8; filter: grayscale(0%); }
+.editorial-card:hover .card-line { width: 100%; }
+.editorial-card:hover .card-content { transform: translateY(-15px); }
 
 /* Form Fields */
 .input-field {
@@ -76,7 +64,7 @@ h1, h2, h3, .font-serif { font-family: 'Cinzel', serif; letter-spacing: 0.05em; 
 .input-field:focus { outline: none; border-color: var(--brass); }
 
 /* Animations */
-.reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+.reveal { opacity: 0; transform: translateY(30px); transition: all 1.5s ease; }
 .reveal.active { opacity: 1; transform: translateY(0); }
 .zoom-effect { animation: slowZoom 40s infinite alternate; }
 @keyframes slowZoom { from { transform: scale(1); } to { transform: scale(1.15); } }
